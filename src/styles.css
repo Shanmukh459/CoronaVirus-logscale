@@ -3,6 +3,21 @@ body {
   overflow: hidden;
 }
 
-svg {
-  background-color: red;
+path {
+  fill: none;
+  stroke: black;
+  stroke-width: 5px;
+}
+
+.domain {
+  display: none;
+}
+
+.tick text {
+  font-size: 1.5em;
+  fill: #676767;
+}
+
+.tick line {
+  stroke: #b5b5b5;
 }
