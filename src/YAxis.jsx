@@ -6,9 +6,7 @@ export const YAxis = ({ yScale }) => {
 
   useEffect(() => {
     const yAxisG = select(ref.current)
-    const yAxis = axisLeft(yScale)
-      .tickSize(-innerWidth)
-      .tickPadding(3)
+    const yAxis = axisLeft(yScale).tickSize(-innerWidth).tickPadding(3)
 
     yAxisG.call(yAxis)
   }, [])

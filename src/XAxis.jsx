@@ -6,12 +6,8 @@ export const XAxis = ({ xScale, innerHeight }) => {
 
   useEffect(() => {
     const xAxisG = select(ref.current)
-    const xAxis = axisBottom(xScale)  
-    .tickSize(innerHeight)
-    .tickPadding(5)
+    const xAxis = axisBottom(xScale).tickSize(innerHeight).tickPadding(5)
     xAxisG.call(xAxis)
   }, [])
-  return (
-    <g ref={ref}></g>
-  )
+  return <g ref={ref}></g>
 }
