@@ -8,8 +8,7 @@ export const YAxis = ({ yScale }) => {
     const yAxisG = select(ref.current)
     const yAxis = axisLeft(yScale)
       .tickSize(-innerWidth)
-      .tickPadding(5)
-
+      .tickPadding(3)
 
     yAxisG.call(yAxis)
   }, [])

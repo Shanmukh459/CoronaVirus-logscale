@@ -1,4 +1,4 @@
-import { line, scaleLinear, scaleTime, extent, max } from 'd3'
+import { line, scaleLog, scaleTime, extent, max } from 'd3'
 import React from 'react'
 import { XAxis } from './XAxis'
 import { YAxis } from './YAxis'
@@ -7,7 +7,7 @@ const margin = {
   top: 45,
   right: 20,
   bottom: 55,
-  left: 120
+  left: 70
 }
 export const LineChart = ({data, height, width}) => {
   const innerWidth = width - margin.left - margin.right
@@ -19,8 +19,8 @@ export const LineChart = ({data, height, width}) => {
     .range([0, innerWidth])
 
   const yValue = d => d.totalDeaths
-  const yScale = scaleLinear()
-    .domain([0, max(data, yValue)])
+  const yScale = scaleLog()
+    .domain([1, max(data, yValue)])
     .range([innerHeight, 0])
 
   const lineGenerator = line()
@@ -44,7 +44,7 @@ export const LineChart = ({data, height, width}) => {
         <text
           className='axis-label'
           textAnchor='middle'
-          transform={`translate(-85, ${innerHeight/2}) rotate(-90)`}
+          transform={`translate(-35, ${innerHeight/2}) rotate(-90)`}
         >Cummulative Deaths</text>
         <XAxis xScale={xScale} innerHeight={innerHeight} />
         <YAxis yScale={yScale} innerWidth={innerWidth} />
