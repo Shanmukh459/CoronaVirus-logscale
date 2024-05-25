@@ -1,8 +1,16 @@
-# React + Vite
+# Corona Virus Data Viz with Log Scale
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This project is to demostrate the rise in the deaths due to Corona virus
+- The line chart depicts the pointed when the deaths toll hit 6 million across the world.
+- The yScale is a logScale and the plot clearly labels the axis along with the ticks
+- Data from [Johns Hopkins Coronavirus Dataset](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv)
 
-Currently, two official plugins are available:
+## Tech Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- D3
+
+## Screenshot
+
+
+Happy Coding!
