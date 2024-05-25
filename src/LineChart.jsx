@@ -4,10 +4,10 @@ import { XAxis } from './XAxis'
 import { YAxis } from './YAxis'
 
 const margin = {
-  top: 20,
+  top: 45,
   right: 20,
-  bottom: 40,
-  left: 80
+  bottom: 55,
+  left: 120
 }
 export const LineChart = ({data, height, width}) => {
   const innerWidth = width - margin.left - margin.right
@@ -30,6 +30,22 @@ export const LineChart = ({data, height, width}) => {
   return (
     <svg height={height} width={width}>
       <g transform={`translate(${margin.left}, ${margin.top})`}>
+        <text
+          textAnchor='middle'
+          x={innerWidth/2}
+          y={-10}
+        >Global Corona virus Deaths Over Time </text>
+        <text
+        className='axis-label'
+          x={innerWidth/2}
+          y={innerHeight + 20}
+          alignmentBaseline='hanging'
+        >Time</text>
+        <text
+          className='axis-label'
+          textAnchor='middle'
+          transform={`translate(-85, ${innerHeight/2}) rotate(-90)`}
+        >Cummulative Deaths</text>
         <XAxis xScale={xScale} innerHeight={innerHeight} />
         <YAxis yScale={yScale} innerWidth={innerWidth} />
         <path d={lineGenerator(data)} />

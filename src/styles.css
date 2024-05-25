@@ -1,6 +1,9 @@
 body {
   margin: 0;
   overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 path {
@@ -20,4 +23,13 @@ path {
 
 .tick line {
   stroke: #b5b5b5;
+}
+
+text {
+  font-size: 2em;
+  fill: #4b4b4b;
+}
+
+.axis-label {
+  font-size: 1.5em;
 }
